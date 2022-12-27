@@ -7,10 +7,9 @@ Clone or Download project . Set on server.
 ```
 CREATE TABLE `users` (
  `id` int(11) NOT NULL AUTO_INCREMENT,
- `first_name` varchar(25) COLLATE utf8_unicode_ci NOT NULL,
- `last_name` varchar(25) COLLATE utf8_unicode_ci NOT NULL,
  `email` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
  `password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+ `confirm_password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
  `phone` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
  `created` datetime NOT NULL,
  `modified` datetime NOT NULL,
@@ -42,20 +41,10 @@ INSERT INTO `keys` (`id`, `user_id`, `key`, `level`, `ignore_limits`, `is_privat
 
 List of APIs you will get:
 
-http://localhost/restserver/authentication/login - POST
+http://localhost/codeigniter-rest-api-user-login-registration/index.php/authentication/login - POST
 
-http://localhost/restserver/authentication/registration - POST
+http://localhost/codeigniter-rest-api-user-login-registration/index.php/authentication/registration - POST
 
-http://localhost/restserver/authentication/user/1 - GET 
+http://localhost/codeigniter-rest-api-user-login-registration/index.php/authentication/user/1 - GET 
 
-http://localhost/restserver/authentication/user_edit - POST
-
-
-Also we will add authentication or security while calling APIs
-
-
-![Auth](https://github.com/stemword/codeigniter-rest-api-user-login-registration/blob/master/1.PNG)
-
-![Header](https://github.com/stemword/codeigniter-rest-api-user-login-registration/blob/master/2.PNG)
-
-![Request](https://github.com/stemword/codeigniter-rest-api-user-login-registration/blob/master/3.PNG)
+http://localhost/codeigniter-rest-api-user-login-registration/index.php/authentication/user_edit - POST
